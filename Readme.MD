@@ -127,3 +127,29 @@
         </div>
     );
     ```
+
+## **Dynamic Content to JSX**
+
+- **JSX-এ ডায়নামিক কনটেন্ট** বলতে বোঝায় এমন কন্টেন্ট যা অ্যাপ্লিকেশনের **স্টেট**, **প্রপস**, বা **ইউজারের ইন্টারঅ্যাকশন** এর উপর ভিত্তি করে পরিবর্তিত হয়। JSX-এ `{}` (কার্লি ব্রেস) ব্যবহার করে সহজেই ভ্যারিয়েবল, এক্সপ্রেশন বা ফাংশনের আউটপুট যুক্ত করা যায়।
+
+    ```jsx
+    const name = "Ali";
+    return <h1>Hello, {name}!</h1>;
+    //Output: Hello, Ali!
+    ```
+
+    ```jsx
+    function DynamicImage() {
+        const imageUrl = "https://via.placeholder.com/150"; // Dynamic Image URL
+        const imageAlt = "Placeholder Image"; // Dynamic alt text
+
+        return (
+            <div>
+                <img src={imageUrl} alt={imageAlt} />
+                <p>{imageAlt}</p>
+            </div>
+        );
+    }
+
+    export default DynamicImage;
+    ```
