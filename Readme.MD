@@ -170,3 +170,47 @@
 **React Component** হলো React-এর একটি মূল ধারণা। এটি এমন একটি পুনঃব্যবহারযোগ্য কোড ব্লক যা UI (User Interface) তৈরি করতে ব্যবহৃত হয়। Component-গুলোর মাধ্যমে বড় অ্যাপ্লিকেশনকে ছোট, আলাদা অংশে ভেঙে ফেলা যায়, যা সহজে ব্যবস্থাপনাযোগ্য এবং পুনঃব্যবহারযোগ্য।
 
 - React Component একটি JavaScript ফাংশনের মতো কাজ করে। এটি **input (props)** নেয় এবং **output হিসেবে JSX (HTML-like structure)** প্রদান করে।
+
+## **React Component-এর ধরণ**
+
+React-এ দুটি প্রধান ধরনের Component রয়েছে:
+
+### **১. Functional Component**
+
+- এটি একটি সাধারণ JavaScript ফাংশন যা JSX রিটার্ন করে।
+- React Hooks-এর সাহায্যে Functional Component-এ state এবং lifecycle method ব্যবহার করা যায়।
+- এটি হালকা ও সহজ এবং আধুনিক React অ্যাপে বেশি ব্যবহৃত হয়।
+
+**উদাহরণ:**
+
+```jsx
+const Greeting = () => {
+  return <h1>Hello, World!</h1>;
+};
+
+export default Greeting;
+```
+
+### **২. Class Component**
+
+- এটি একটি ES6 ক্লাস যা `React.Component` থেকে এক্সটেন্ড করে।
+- এতে `render()` মেথড থাকে যা JSX রিটার্ন করে।
+- এটি React Hooks আসার আগে state এবং lifecycle method পরিচালনার জন্য ব্যবহৃত হতো।
+- Class Component এখন কম ব্যবহৃত হয়।
+
+**উদাহরণ:**
+
+```jsx
+import React, { Component } from 'react';
+
+class Greeting extends Component {
+  render() {
+    return <h1>Hello, World!</h1>;
+  }
+}
+```
+
+## **Functional vs Class Component কবে ব্যবহার করবেন?**
+
+- **Functional Component:** আধুনিক React-এ সবসময় Functional Component ব্যবহার করুন। এগুলো সহজ এবং Hooks সাপোর্ট করে।
+- **Class Component:** শুধুমাত্র পুরোনো প্রোজেক্টে যেখানে Hooks নেই।
