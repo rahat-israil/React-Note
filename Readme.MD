@@ -264,3 +264,24 @@ const App = () => {
 };
 ```
 
+## **Create a Component with Dynamic Content**
+
+- Inside the `src` folder, create a file `Greeting.jsx`:
+
+```jsx
+import React from "react";
+
+const Greeting = () => {
+  const user = { name: "Alice", age: 25 };
+  const isLoggedIn = true;
+
+  return (
+    <div>
+      <h1>Welcome, {isLoggedIn ? user.name : "Guest"}!</h1>
+      <p>Your age is {user.age}.</p>
+    </div>
+  );
+};
+
+export default Greeting;
+```
