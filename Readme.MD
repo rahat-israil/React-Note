@@ -214,3 +214,53 @@ class Greeting extends Component {
 
 - **Functional Component:** আধুনিক React-এ সবসময় Functional Component ব্যবহার করুন। এগুলো সহজ এবং Hooks সাপোর্ট করে।
 - **Class Component:** শুধুমাত্র পুরোনো প্রোজেক্টে যেখানে Hooks নেই।
+
+## **JSX কী?**
+
+**JSX (JavaScript XML)** হলো জাভাস্ক্রিপ্টের একটি সিনট্যাক্স এক্সটেনশন, যা দেখতে HTML-এর মতো লাগে কিন্তু এটি জাভাস্ক্রিপ্টের ভেতরে কাজ করে। **React**-এ UI (User Interface) স্ট্রাকচার বর্ণনা করার জন্য JSX ব্যবহার করা হয়।
+
+---
+
+### **JSX-এর বৈশিষ্ট্য**
+
+1. **HTML-এর মতো কোড লেখা যায়:**
+    
+    JSX আপনাকে JavaScript-এর ভেতরে সরাসরি HTML-এর মতো কোড লিখতে দেয়।
+    
+2. **HTML নয়, তবে HTML-এর মতো:**
+    
+    JSX কোনো প্রকৃত HTML নয়। এটি একটি জাভাস্ক্রিপ্ট সিনট্যাক্স যা **Babel** এর মতো টুল ব্যবহার করে সাধারণ JavaScript-এ রূপান্তরিত হয়।
+    
+
+---
+
+### **কেন JSX ব্যবহার করা হয়?**
+
+JSX ব্যবহার করলে জাভাস্ক্রিপ্ট এবং HTML একত্রে ব্যবহারের সুবিধা পাওয়া যায়। এটি React-এ UI তৈরি করার প্রক্রিয়াকে দ্রুত এবং সহজ করে তোলে।
+
+## **How to Add Dynamic Content in JSX**
+
+- You can embed any JavaScript expression inside JSX using curly braces `{}`.
+
+### **Example 1: Display a Variable**
+
+```jsx
+const App = () => {
+  const name = "John";
+  return <h1>Hello, {name}!</h1>;
+};
+```
+
+Here, `name` is dynamically added to JSX.
+
+### **Example 2: Conditional Rendering in JSX**
+
+Use ternary operators to conditionally display content:
+
+```jsx
+const App = () => {
+  const isLoggedIn = true;
+  return <h1>{isLoggedIn ? "Welcome back!" : "Please log in."}</h1>;
+};
+```
+
