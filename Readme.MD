@@ -285,3 +285,42 @@ const Greeting = () => {
 
 export default Greeting;
 ```
+
+## **React-এর Props কী?**
+
+- **Props** (properties-এর সংক্ষেপ) হলো React-এ ডেটা পাস করার একটি পদ্ধতি। সাধারণত, **parent component** থেকে **child component**-এ ডেটা পাঠানোর জন্য এটি ব্যবহার করা হয়। Props **read-only**, অর্থাৎ child component এটি পরিবর্তন করতে পারে না।
+- Props React-এর কম্পোনেন্টকে ডাইনামিক এবং পুনরায় ব্যবহারযোগ্য করে তোলে।
+
+### **Props-এর উদাহরণ**
+
+1. **Parent Component (App):**
+    
+    ```jsx
+    import React from 'react';
+    import Greeting from './Greeting';
+    
+    const App = () => {
+      return (
+        <div>
+          <Greeting name="Alice" />
+          <Greeting name="Bob" />
+        </div>
+      );
+    };
+    
+    export default App;
+    ```
+    
+2. **Child Component (Greeting):**
+    
+    ```jsx
+    import React from 'react';
+    
+    const Greeting = (props) => {
+      return <h1>Hello, {props.name}!</h1>;
+    };
+    
+    export default Greeting;
+    ```
+    
+
