@@ -324,3 +324,70 @@ export default Greeting;
     ```
     
 
+### **Props কেন দরকার?**
+
+1. **কম্পোনেন্টের মধ্যে ডেটা শেয়ার করা।**
+2. **UI ডাইনামিক করা।**
+3. **কম্পোনেন্টকে পুনরায় ব্যবহারযোগ্য করা।**
+
+### **Props-এর বেসিক ব্যবহার**
+
+1. **Props পাঠানো:**
+    
+    Props HTML-এর অ্যাট্রিবিউটের মতো পাঠানো হয়।
+    
+    ```jsx
+    jsx
+    Copy code
+    <ChildComponent attributeName="value" />
+    
+    ```
+    
+2. **Props গ্রহণ করা:**
+    
+    Props child component-এ একটি প্যারামিটার (`props`) হিসেবে পাওয়া যায়।
+    
+    ```jsx
+    jsx
+    Copy code
+    const ChildComponent = (props) => {
+      return <h1>{props.attributeName}</h1>;
+    };
+    
+    ```
+    
+3. **Props ডিস্ট্রাকচারিং করা:**
+    
+    `props.attributeName` না লিখে সরাসরি ডিস্ট্রাকচারিং করা যায়:
+    
+    ```jsx
+    jsx
+    Copy code
+    const ChildComponent = ({ attributeName }) => {
+      return <h1>{attributeName}</h1>;
+    };
+    
+    ```
+    
+
+### **Destructuring Multiple Props**
+
+```jsx
+jsx
+Copy code
+import React from 'react';
+
+const ProductDetails = ({ name, price, description }) => {
+  return (
+    <div>
+      <h2>Product Name: {name}</h2>
+      <p>Price: ${price}</p>
+      <p>Description: {description}</p>
+    </div>
+  );
+};
+
+export default ProductDetails;
+
+```
+
