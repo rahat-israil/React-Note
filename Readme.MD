@@ -418,3 +418,47 @@ React-এ **PropTypes** ব্যবহার করে আমরা নিশ�
 2. **PropTypes ডিফাইন করা:**
     
     PropTypes ব্যবহার করে প্রত্যাশিত props টাইপ এবং তাদের বাধ্যতামূলকতা সেট করা হয়।
+
+
+### **উদাহরণ ১: Basic Prop Validation**
+
+```jsx
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Greeting = ({ name, age }) => {
+  return (
+    <div>
+      <h1>Hello, {name}!</h1>
+      <p>You are {age} years old.</p>
+    </div>
+  );
+};
+
+// PropTypes ডিফাইন করা
+Greeting.propTypes = {
+  name: PropTypes.string.isRequired, // name অবশ্যই string হতে হবে এবং এটি বাধ্যতামূলক
+  age: PropTypes.number,             // age একটি সংখ্যা হতে হবে
+};
+
+export default Greeting;
+```
+
+**Parent Component-এ ব্যবহার:**
+
+```jsx
+import React from 'react';
+import Greeting from './Greeting';
+
+const App = () => {
+  return (
+    <div>
+      <Greeting name="Alice" />
+      <Greeting name="Bob" age={25} />
+    </div>
+  );
+};
+
+export default App;
+```
+
