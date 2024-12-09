@@ -462,3 +462,22 @@ const App = () => {
 export default App;
 ```
 
+### **PropTypes Validation টাইপসমূহ**
+
+| PropTypes টাইপ | বর্ণনা |
+| --- | --- |
+| `PropTypes.string` | props টি string হতে হবে। |
+| `PropTypes.number` | props টি number হতে হবে। |
+| `PropTypes.bool` | props টি boolean হতে হবে। |
+| `PropTypes.array` | props টি array হতে হবে। |
+| `PropTypes.object` | props টি object হতে হবে। |
+| `PropTypes.func` | props টি function হতে হবে। |
+| `PropTypes.node` | render করা যায় এমন কিছু (string, JSX)। |
+| `PropTypes.element` | একটি React element হতে হবে। |
+| `PropTypes.oneOf` | নির্দিষ্ট কিছু মানের একটি হতে হবে। |
+| `PropTypes.arrayOf` | নির্দিষ্ট টাইপের array হতে হবে। |
+| `PropTypes.shape` | নির্দিষ্ট গঠনযুক্ত object হতে হবে। |
+| `PropTypes.any` | যেকোনো টাইপ হতে পারে। |
+
+---
+
