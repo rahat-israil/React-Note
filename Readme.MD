@@ -523,4 +523,25 @@ const App = () => {
 export default App;
 ```
 
----
+## **Props পাস করার উপায়**
+
+1. **একটি props পাস করা:**
+    
+    ```jsx
+    <ComponentName propName="value" />
+    ```
+    
+2. **একাধিক props পাস করা:**
+    
+    ```jsx
+    <ComponentName prop1="value1" prop2={value2} />
+    ```
+    
+3. **Object পাস করা:**
+    
+    ```jsx
+    const user = { name: "Alice", email: "alice@example.com" };
+    <ComponentName user={user} />
+    ```
+    
+
