@@ -481,3 +481,31 @@ export default App;
 
 ---
 
+### **উদাহরণ ২: Object এবং Array Validation**
+
+```jsx
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const UserCard = ({ user }) => {
+  return (
+    <div>
+      <h2>{user.name}</h2>
+      <p>Email: {user.email}</p>
+      <p>Age: {user.age}</p>
+    </div>
+  );
+};
+
+UserCard.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired, // name বাধ্যতামূলক এবং string হতে হবে
+    email: PropTypes.string.isRequired,
+    age: PropTypes.number,
+  }).isRequired,
+};
+
+export default UserCard;
+```
+
+**Parent Co**
