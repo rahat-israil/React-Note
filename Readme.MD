@@ -508,4 +508,19 @@ UserCard.propTypes = {
 export default UserCard;
 ```
 
-**Parent Co**
+**Parent Component-এ ব্যবহার:**
+
+```jsx
+import React from 'react';
+import UserCard from './UserCard';
+
+const App = () => {
+  const user = { name: "Alice", email: "alice@example.com", age: 30 };
+
+  return <UserCard user={user} />;
+};
+
+export default App;
+```
+
+---
