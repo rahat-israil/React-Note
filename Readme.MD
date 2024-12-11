@@ -545,3 +545,22 @@ export default App;
     ```
     
 
+## **Props পড়ার উপায়**
+
+1. **`props` এর মাধ্যমে এক্সেস:**
+    
+    ```jsx
+    const ComponentName = (props) => {
+      return <h1>{props.propName}</h1>;
+    };
+    
+    ```
+    
+2. **Props destructuring:**
+    
+    ```jsx
+    const ComponentName = ({ propName }) => {
+      return <h1>{propName}</h1>;
+    };
+    ```
+    
