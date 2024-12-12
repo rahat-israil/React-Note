@@ -615,3 +615,64 @@ const UserCard = ({ user }) => {
 };
 ```
 
+## **React Conditional Rendering**
+
+React-এ **Conditional Rendering** ব্যবহার করে আমরা শর্ত সাপেক্ষে UI-এ বিভিন্ন অংশ দেখাতে পারি। এখানে 5টি পদ্ধতি ব্যবহার করে Conditional Rendering দেখানো হয়েছে।
+
+---
+
+### **Parent Component (মূল কম্পোনেন্ট)**
+
+```jsx
+const App = () => {
+  return (
+    <div>
+      <ToDo task="Learn React" isDone={true} />
+      <ToDo task="Explore React Documentation" isDone={false} />
+    </div>
+  );
+};
+
+export default App;
+```
+
+**ব্যাখ্যা:**
+
+- এখানে দুটি `ToDo` কম্পোনেন্ট ব্যবহার করা হয়েছে।
+- `isDone={true}` হলে সম্পন্ন টাস্ক দেখাবে।
+- `isDone={false}` হলে অসম্পন্ন টাস্ক দেখাবে।
+
+---
+
+### **পদ্ধতি ১: `if-else` ব্যবহার করা**
+
+```jsx
+const ToDo = ({ task, isDone }) => {
+  if (isDone === true) {
+    return <li>Finished: {task}</li>;
+  } else {
+    return <li>Work on: {task}</li>;
+  }
+};
+```
+
+**ব্যাখ্যা:**
+
+- এখানে `if-else` ব্লক ব্যবহার করা হয়েছে।
+- যদি `isDone` সত্য (true) হয়, তাহলে "Finished: {task}" দেখাবে।
+- যদি `isDone` মিথ্যা (false) হয়, তাহলে "Work on: {task}" দেখাবে।
+- পড়তে সহজ, তবে কোড একটু বেশি বড় হয়।
+
+---
+
+### **পদ্ধতি ২: শুধুমাত্র `if` ব্যবহার করা (বিনা `else`)**
+
+```jsx
+const ToDo = ({ task, isDone }) => {
+  if (isDone) {
+    return <li>Finished: {task}</li>;
+  }
+  return <li>Work on: {task}</li>;
+};
+```
+
