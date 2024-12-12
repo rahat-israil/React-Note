@@ -676,3 +676,20 @@ const ToDo = ({ task, isDone }) => {
 };
 ```
 
+### **পদ্ধতি ৩: Ternary Operator ব্যবহার করা**
+
+```jsx
+const ToDo = ({ task, isDone }) => {
+  return <li>{isDone ? 'Finished' : 'Work on'}: {task}</li>;
+};
+```
+
+**ব্যাখ্যা:**
+
+- এখানে Ternary Operator (`?`) ব্যবহার করা হয়েছে।
+- যদি `isDone` সত্য হয়, তাহলে "Finished: {task}" দেখাবে।
+- যদি মিথ্যা হয়, তাহলে "Work on: {task}" দেখাবে।
+- এটি সংক্ষিপ্ত এবং সরাসরি।
+
+---
+
