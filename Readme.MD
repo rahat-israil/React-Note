@@ -564,3 +564,27 @@ export default App;
     };
     ```
     
+### **Using Destructuring in Function Parameters**
+
+Destructuring ব্যবহার করে props এর নির্দিষ্ট মানগুলো সহজে পড়া যায়।
+
+```jsx
+// Parent Component:
+const App = () => {
+  return <WelcomeMessage name="Rahat" age={21} />;
+};
+
+export default App;
+```
+
+```jsx
+const WelcomeMessage = ({ name, age }) => {
+  return (
+    <div>
+      <h1>Welcome, {name}!</h1>
+      <p>You are {age} years old.</p>
+    </div>
+  );
+};
+
+```
