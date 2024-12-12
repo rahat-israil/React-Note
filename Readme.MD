@@ -588,3 +588,30 @@ const WelcomeMessage = ({ name, age }) => {
 };
 
 ```
+
+### **Passing an Object as a Prop**
+
+যখন একটি অবজেক্ট পাস করা হয়, তখন অবজেক্টের ভেতরের ডেটা পড়া যায়।
+
+```jsx
+// Parent Component:
+const App = () => {
+  const userInfo = { name: "Rahat", email: "rahat@example.com", age: 21 };
+  return <UserCard user={userInfo} />;
+};
+
+export default App;
+```
+
+```jsx
+const UserCard = ({ user }) => {
+  return (
+    <div>
+      <h2>{user.name}</h2>
+      <p>Email: {user.email}</p>
+      <p>Age: {user.age}</p>
+    </div>
+  );
+};
+```
+
