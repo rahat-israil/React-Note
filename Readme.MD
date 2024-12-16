@@ -827,3 +827,31 @@ function App() {
 }
 ```
 
+### **2. Event Handler as a Function**
+
+Defining the event handler as a separate function in the component.
+
+```jsx
+function App() {
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
+
+  return <button onClick={handleClick}>Click Me</button>;
+}
+```
+
+### **3. Using Arrow Functions in Render**
+
+Passing an arrow function directly in the JSX.
+
+```jsx
+function App() {
+  const showMessage = (message) => {
+    alert(message);
+  };
+
+  return <button onClick={() => showMessage('Hello!')}>Click Me</button>;
+}
+```
+
