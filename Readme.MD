@@ -887,3 +887,60 @@ function App() {
 }
 ```
 
+## **React-এ Simple State Change**
+
+React-এ **state** হলো এমন একটি ডেটা যা কোনো কম্পোনেন্টের ভেতরে রাখা হয় এবং সময়ের সাথে পরিবর্তন হয়। যখন state পরিবর্তন হয়, React স্বয়ংক্রিয়ভাবে সেই কম্পোনেন্টটিকে পুনরায় রেন্ডার করে এবং নতুন ডেটা দেখায়।
+
+### **উদাহরণ: Counter অ্যাপ্লিকেশন**
+
+```jsx
+import React, { useState } from "react";
+
+function CounterApp() {
+  // State ডিক্লেয়ার করা
+  const [count, setCount] = useState(0);
+
+  // Button ক্লিক করার ফাংশন
+  const incrementCount = () => {
+    setCount(count + 1); // count এর মান ১ বাড়ানো হচ্ছে
+  };
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={incrementCount}>Increment</button>
+    </div>
+  );
+}
+
+export default CounterApp;
+```
+
+---
+
+### **কোডের ব্যাখ্যা**
+
+1. **State ডিক্লেয়ার করা:**
+    
+    ```jsx
+    const [count, setCount] = useState(0);
+    ```
+    
+    - `useState(0)` দিয়ে state এর প্রাথমিক মান `0` সেট করা হয়েছে।
+    - `count` হলো বর্তমান state এর মান।
+    - `setCount` হলো একটি ফাংশন, যা state পরিবর্তন করার জন্য ব্যবহার করা হয়।
+2. **State আপডেট করা:**
+    - যখন ব্যবহারকারী **Increment** বাটনে ক্লিক করবে, তখন `incrementCount` ফাংশন কল হবে।
+    - `setCount` ফাংশন `count` এর মান ১ করে বাড়িয়ে দেবে।
+3. **State রেন্ডার করা:**
+    - React স্বয়ংক্রিয়ভাবে UI-কে পুনরায় রেন্ডার করে যখন state পরিবর্তন হয়। উদাহরণস্বরূপ, নতুন `count` মান দেখাবে।
+
+---
+
+### **আউটপুট**
+
+1. শুরুতে, `Count: 0` দেখাবে।
+2. **Increment** বাটনে ক্লিক করলে `Count: 1`, তারপর `Count: 2`, এইভাবে বাড়তে থাকবে।
+
+এই প্রক্রিয়ায় React কম্পোনেন্টটি প্রতিবার state আপডেটের পরে নতুন ডেটা দেখাবে।
+
