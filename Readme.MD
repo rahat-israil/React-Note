@@ -1071,3 +1071,39 @@ export default CounterApp;
 5. **`useRef`:**
     - DOM এলিমেন্ট অথবা কোনো মান সংরক্ষণ করতে ব্যবহৃত হয় যা রেন্ডার হয় না।
 
+
+## **Understand the concept of React `useEffect`**
+
+**`useEffect` কী?**
+
+React-এ `useEffect` একটি **Hook**, যা আপনার কোডে **side effects** পরিচালনা করতে ব্যবহৃত হয়।
+
+**Side effects** মানে এমন কাজ যা React এর রেন্ডারিং-এর বাইরের:
+
+- API থেকে ডেটা ফেচ করা
+- DOM আপডেট করা
+- Timer সেট করা
+- Event Listener যোগ করা বা অপসারণ করা ইত্যাদি।
+
+```jsx
+import { useEffect, useState } from "react";
+
+const Users = () => {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => res.json())
+            .then(data => setUsers(data))
+    }, []);
+
+    return (
+        <div>
+            <h2>Users: {users.length}</h2>
+        </div>
+    );
+};
+
+export default Users;
+```
+
