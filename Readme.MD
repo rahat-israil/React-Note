@@ -974,3 +974,49 @@ const Counter = () => {
 export default Counter;
 ```
 
+## **React Hooks এবং `useState`**
+
+### **React Hooks কী?**
+
+React Hooks হলো এমন কিছু বিশেষ ফাংশন যা **Functional Components**-এ React-এর **state** এবং **lifecycle** feature ব্যবহার করার সুযোগ করে দেয়।
+
+React 16.8 ভার্সনে এটি যুক্ত করা হয়। Hooks এর মাধ্যমে আমরা কোনো ক্লাস লিখা ছাড়াই React এর শক্তিশালী ফিচারগুলো ব্যবহার করতে পারি।
+
+### **`useState` কী?**
+
+`useState` হলো React-এর একটি Hook, যা একটি Functional Component-এ **state** যোগ করার সুযোগ করে দেয়।
+
+State হলো এমন একটি মান যা Component-এর মধ্যে **পরিবর্তনশীল ডেটা** সংরক্ষণ করে।
+
+`useState` দুইটি জিনিস ফেরত দেয়:
+
+1. বর্তমান state-এর মান।
+2. একটি ফাংশন যা state আপডেট করতে সাহায্য করে।
+
+---
+
+### **`useState` এর কাজ করার ধরণ**
+
+1. **`useState` ইমপোর্ট করা:**
+    
+    ```jsx
+    jsx
+    Copy code
+    import React, { useState } from "react";
+    
+    ```
+    
+2. **State ঘোষণা করা:**
+    
+    ```jsx
+    jsx
+    Copy code
+    const [state, setState] = useState(initialValue);
+    
+    ```
+    
+    - **state:** বর্তমান মান।
+    - **setState:** state আপডেট করার জন্য ফাংশন।
+    - **initialValue:** state-এর প্রাথমিক মান।
+
+
